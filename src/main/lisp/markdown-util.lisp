@@ -18,18 +18,18 @@
       (let (#+NIL (dsub (class-direct-subclasses  object))
 	    (dsl (class-direct-slots object))
 	    (esl (class-slots object)))
-	(format stream "`~S` [~S]~%"
+	(format stream "**`~S`** [~S]~%"
 		(class-name object)
 		(type-of object))
-	(format stream "~%* Direct Superclasses~%")
+	(format stream "* Direct Superclasses~%")
 	(format-iterate-classes
 	 (class-direct-superclasses object))
-	(format stream "~%* Direct Subclasses~%")
+	(format stream "* Direct Subclasses~%")
 	(format-iterate-classes
 	 (class-direct-subclasses  object))
-	(format stream "~%* Direct Slots~%")
+	(format stream "* Direct Slots~%")
 	(format-iterate-slots dsl)
-	(format stream "~%* Inherited Slots~%")
+	(format stream "* Inherited Slots~%")
 	(format-iterate-slots (set-difference esl dsl
 					      :key #'slot-definition-name
 					      :test #'eq
