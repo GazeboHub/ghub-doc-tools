@@ -2,7 +2,7 @@
 (in-package #:cl-user)
 
 (defpackage #:ghub/doc-tools
-  (:use  #:lupine/aux #:c2mop #:cl)
+  (:use #+NIL  #:lupine/aux #:c2mop #:cl)
   #+(or CMU SBCL)
   (:shadowing-import-from
    #+sbcl #:sb-pcl

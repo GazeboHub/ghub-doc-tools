@@ -13,7 +13,7 @@
 ;; refer to http://www.alu.org/mop/index.html
 
 (defsystem #:ghub-doc-tools
-  :depends-on (#:lupine-aux #:closer-mop)
+  :depends-on (#+NIL #:lupine-aux #:closer-mop)
   :components
   ((:file "package")
    (:file "markdown-util"
